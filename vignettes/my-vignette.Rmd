@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-devtools::load_all()
+library(FARS)
 ```
 
 ## Here is a sample vignette that shows you how to use the FARS functions
@@ -22,8 +22,9 @@ devtools::load_all()
 First we will take a look at the 2013 data by reading it in using the fars_read function. Once the data is loaded in as a data frame, go ahead and inspect it.
 
 ```{r readin_2013}
-file_path <- system.file("data","accident_2013.csv",package="FARS")
-data_2013 <- fars_read(file_path)
+#file_path <- system.file("data","accident_2013.csv",package="FARS")
+#data_2013 <- fars_read(file_path)
+data(data_2013)
 head(data_2013)
 class(data_2013)
 ```
