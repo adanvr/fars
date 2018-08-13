@@ -1,0 +1,31 @@
+---
+title: "How to use FARS functions"
+author: "Adan Romero"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Here is a sample vignette that shows you how to use the FARS functions
+
+First we will take a look at the 2013 data by reading it in using the fars_read function. Once the data is loaded in as a data frame, go ahead and inspect it.
+
+```{r readin_2013}
+file_path <- system.file("data","accident_2013.csv",package="FARS")
+data_2013 <- fars_read(file_path)
+head(data_2013)
+class(data_2013)
+```
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))
